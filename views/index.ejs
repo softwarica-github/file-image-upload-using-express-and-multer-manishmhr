@@ -1,0 +1,39 @@
+<% include partials/header %>
+
+<body>
+<div class="alert alert-primary" role="alert">
+		<%= typeof msg !== 'undefined' ? msg : '' %>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+    <div class="jumbotron jumbotron-fluid">
+        			<div class="container">
+        				<h1 class="display-4">IMAGE UPLOAD</h1>
+        				<p class="lead">UPLOADING IMAGE USING MULTER.</p>
+        			</div>
+        		</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+	<form action="/imageupload" method="post" enctype="multipart/form-data">
+
+		<div class="form-group">
+								<label for="exampleFormControlFile1">SELECT IMAGE FOR UPLOAD.</label>
+			<input type="file" class="form-control-file" id="image" name="image">
+
+		<div class="form-group" >
+			<button type="submit" class="btn btn-danger btn-lg btn-block" value="Upload Image">
+				Upload Inage</button></div>
+
+        </div>
+    </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
